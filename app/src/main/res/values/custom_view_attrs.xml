@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Атрибуты для работы в xml с кастомным вью со списком-->
+    <declare-styleable name="AbstractHorizontalListView">
+        <attr name="title_text" format="string" />
+    </declare-styleable>
+
+    <!-- Атрибуты для работы в xml со списком персонала-->
+    <declare-styleable name="HorizontalStaffListView">
+        <attr name="spanCount" format="integer" />
+    </declare-styleable>
+</resources>

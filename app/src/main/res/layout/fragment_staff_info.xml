@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/borders"
+        tools:context=".presentation.screen.staffInfo.StaffInfoFragment">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="146dp"
+            android:layout_height="201dp"
+            android:layout_marginStart="@dimen/borders"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/staff_name"
+            style="@style/StaffName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/borders"
+            app:layout_constraintStart_toEndOf="@id/photo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/staff_profession"
+            style="@style/StaffProfession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/borders"
+            app:layout_constraintStart_toEndOf="@id/photo"
+            app:layout_constraintTop_toBottomOf="@id/staff_name"
+            tools:text="@tools:sample/lorem" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/main_info_barrier"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="photo, staff_profession" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/filmography_group"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:constraint_referenced_ids="best_films, filmography_title, to_list_link,count_films" />
+
+        <com.example.skillcinema.presentation.customViews.horizontalListView.filmList.HorizontalFilmListView
+            android:id="@+id/best_films"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/main_info_barrier"
+            app:title_text="@string/best_films_of_staff" />
+
+        <TextView
+            android:id="@+id/filmography_title"
+            style="@style/TitleListText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/borders"
+            android:text="@string/filmography"
+            app:layout_constraintEnd_toStartOf="@id/to_list_link"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/best_films" />
+
+        <TextView
+            android:id="@+id/to_list_link"
+            style="@style/LinkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/borders"
+            android:text="@string/to_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/filmography_title"
+            app:layout_constraintTop_toBottomOf="@id/best_films" />
+
+        <TextView
+            android:id="@+id/count_films"
+            style="@style/ItemDescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/borders"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filmography_title"
+            tools:text="@tools:sample/lorem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

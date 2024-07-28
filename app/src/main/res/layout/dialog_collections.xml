@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_margin"
+    android:paddingBottom="80dp">
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:contentDescription="@string/close"
+        android:paddingStart="@dimen/error_dialog_margin"
+        android:paddingTop="@dimen/error_dialog_margin"
+        android:paddingEnd="0dp"
+        app:srcCompat="@drawable/button_close" />
+
+    <include
+        android:id="@+id/film_info"
+        layout="@layout/item_film_list" />
+
+    <TextView
+        style="@style/ItemDescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/separator_in_title"
+        android:layout_marginStart="@dimen/small_borders"
+        android:layout_marginEnd="@dimen/small_borders"
+        android:drawablePadding="32dp"
+        android:lines="1"
+        android:paddingVertical="@dimen/small_borders"
+        android:text="@string/add_to_collection"
+        app:drawableLeftCompat="@drawable/draw_collections" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/collection_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_collection_list" />
+
+    <TextView
+        android:id="@+id/add_new_collection"
+        style="@style/ItemDescriptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/separator_in_create"
+        android:layout_marginStart="@dimen/indent"
+        android:layout_marginEnd="@dimen/small_borders"
+        android:drawablePadding="@dimen/separator_in_create"
+        android:lines="1"
+        android:paddingHorizontal="@dimen/create_new_padding"
+        android:paddingVertical="@dimen/small_borders"
+        android:text="@string/create_new_collection"
+        app:drawableLeftCompat="@drawable/button_add_collection" />
+
+</LinearLayout>

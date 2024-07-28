@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.screen.filmsFromStaff.FilmsFromStaffFragment">
+
+    <TextView
+        android:id="@+id/staff_name"
+        style="@style/StaffName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginVertical="@dimen/small_borders"
+        android:textStyle="bold"
+        tools:text="Иван иванов"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/profession_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/borders"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/horizontal_margin"
+        app:tabIndicatorColor="@color/transparent"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="4dp"
+        app:tabPaddingStart="4dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin" />
+
+</LinearLayout>

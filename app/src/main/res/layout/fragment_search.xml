@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_margin"
+    tools:context=".presentation.screen.search.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginVertical="@dimen/horizontal_margin"
+        android:background="@drawable/background_search_edit_text"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/search_text"
+            style="@style/SearchBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/borders"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/app_nav_search"
+            android:drawablePadding="@dimen/small_borders"
+            android:drawableTint="@color/gray"
+            android:hint="@string/search_hint"
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences"
+            android:lines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/small_borders"
+            android:background="@color/gray" />
+
+        <ImageView
+            android:id="@+id/search_params"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/search_parameters"
+            android:paddingHorizontal="@dimen/borders"
+            android:paddingVertical="@dimen/small_borders"
+            android:src="@drawable/button_search_parameters" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/search_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/blue"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/borders"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/nothing_found"
+        style="@style/NothingFoundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="48dp"
+        android:text="@string/nothing_found_in_search"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/found_films"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_film_list" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SkillCinema" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/gray_blue</item>
+        <item name="colorSecondaryVariant">@color/gray</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarStyle">@style/TransparentActionBar</item>
+        <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="TransparentActionBar" parent="Widget.Material3.Light.ActionBar.Solid">
+        <item name="background">@color/transparent</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/dialog_bottom_sheet</item>
+    </style>
+
+    <style name="AppDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="dialogCornerRadius">@dimen/dialog_radius_corner</item>
+        <item name="colorSecondary">@color/blue</item>
+    </style>
+
+    <style name="FullscreenDialogTheme" parent="Theme.SkillCinema">
+        <item name="android:windowBackground">@color/transparent_black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+
+</resources>

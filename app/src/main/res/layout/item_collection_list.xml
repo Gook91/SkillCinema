@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/horizontal_margin">
+
+    <CheckBox
+        android:id="@+id/is_added_to_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/button_collections_selector"
+        android:buttonTint="@color/collection_check_box_selector"
+        android:padding="@dimen/small_borders" />
+
+    <!-- Текст добавлен отдельным элементом для того, чтобы можно было разделить
+       пустым пространством текст и флажок -->
+    <TextView
+        android:id="@+id/collection_name"
+        style="@style/ItemDescriptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/separator_in_item"
+        android:layout_weight="1"
+        android:lines="1"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/collection_count_films"
+        style="@style/ItemDescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="9" />
+
+</LinearLayout>

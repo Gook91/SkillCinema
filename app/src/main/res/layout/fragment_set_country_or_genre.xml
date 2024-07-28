@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_margin"
+    tools:context=".presentation.screen.search.setParams.SetCountryFragment">
+
+    <EditText
+        android:id="@+id/search_text"
+        style="@style/SearchBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_borders"
+        android:background="@drawable/background_search_edit_text"
+        android:drawableStart="@drawable/app_nav_search"
+        android:drawablePadding="@dimen/small_borders"
+        android:drawableTint="@color/gray"
+        android:importantForAutofill="no"
+        android:inputType="textCapSentences"
+        android:lines="1"
+        android:paddingHorizontal="@dimen/borders"
+        tools:hint="Введите для поиска" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/borders"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_string" />
+
+</LinearLayout>

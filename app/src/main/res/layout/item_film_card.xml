@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/film_card_width"
+    android:layout_height="@dimen/film_card_height"
+    android:layout_marginEnd="8dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="@dimen/film_card_width"
+        android:layout_height="@dimen/film_card_poster_height">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            app:shapeAppearanceOverlay="@style/ImageShapeAppearance"
+            android:id="@+id/poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/rating"
+            style="@style/ItemRatingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:layout_margin="6dp"
+            android:background="@drawable/background_rating"
+            android:gravity="center"
+            tools:ignore="SmallSp"
+            tools:text="7.8" />
+
+        <ImageView
+            android:id="@+id/isViewed"
+            android:layout_width="@dimen/checkbox_size"
+            android:layout_height="@dimen/checkbox_size"
+            android:layout_gravity="bottom|end"
+            android:scaleType="center"
+            android:visibility="gone"
+            app:srcCompat="@drawable/button_viewed_true"
+            app:tint="@color/white"
+            tools:visibility="visible"
+            android:contentDescription="@string/viewed" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/ItemNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/ItemDescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/lorem" />
+
+</LinearLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_host"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.example.skillcinema.presentation.screen.main.MainFragment"
+        android:label=""
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_main_fragment_to_film_list_fragment"
+            app:destination="@id/film_list_fragment">
+            <argument
+                android:name="queryType"
+                app:argType="com.example.skillcinema.entity.query.QueryType" />
+        </action>
+        <action
+            android:id="@+id/action_main_fragment_to_film_info_fragment"
+            app:destination="@id/film_info_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/film_list_fragment"
+        android:name="com.example.skillcinema.presentation.screen.filmList.FilmListFragment"
+        tools:layout="@layout/fragment_film_list">
+        <argument
+            android:name="queryType"
+            app:argType="com.example.skillcinema.entity.query.QueryType" />
+        <action
+            android:id="@+id/action_film_list_fragment_to_film_info_fragment"
+            app:destination="@id/film_info_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/film_info_fragment"
+        android:name="com.example.skillcinema.presentation.screen.filmInfo.FilmInfoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_film_info">
+        <argument
+            android:name="kinopoiskId"
+            android:defaultValue="4903757"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_film_info_fragment_to_episodes_from_serial_fragment"
+            app:destination="@id/episodes_from_serial_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_film_info_fragment_to_gallery_from_film_fragment"
+            app:destination="@id/gallery_from_film_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_film_info_fragment_to_film_list_fragment"
+            app:destination="@id/film_list_fragment">
+            <argument
+                android:name="queryType"
+                app:argType="com.example.skillcinema.entity.query.QueryType" />
+        </action>
+        <action
+            android:id="@+id/action_film_info_fragment_to_film_info_fragment"
+            app:destination="@id/film_info_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_film_info_fragment_to_staff_list_fragment"
+            app:destination="@id/staff_list_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+            <argument
+                android:name="isActors"
+                app:argType="boolean" />
+        </action>
+        <action
+            android:id="@+id/action_film_info_fragment_to_staff_info_fragment"
+            app:destination="@id/staff_info_fragment">
+            <argument
+                android:name="staffId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/episodes_from_serial_fragment"
+        android:name="com.example.skillcinema.presentation.screen.episodesFromSerial.EpisodesFromSerialFragment"
+        tools:layout="@layout/fragment_episodes_from_serial">
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gallery_from_film_fragment"
+        android:name="com.example.skillcinema.presentation.screen.galleryFromFilm.GalleryFromFilmFragment"
+        android:label="@string/gallery"
+        tools:layout="@layout/fragment_gallery_from_film">
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/staff_list_fragment"
+        android:name="com.example.skillcinema.presentation.screen.staffList.StaffListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_staff_list">
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+        <argument
+            android:name="isActors"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_staff_list_fragment_to_staff_info_fragment"
+            app:destination="@id/staff_info_fragment">
+            <argument
+                android:name="staffId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/staff_info_fragment"
+        android:name="com.example.skillcinema.presentation.screen.staffInfo.StaffInfoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_staff_info">
+        <argument
+            android:name="staffId"
+            android:defaultValue="10143"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_staff_info_fragment_to_film_info_fragment"
+            app:destination="@id/film_info_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_staff_info_fragment_to_films_from_staff_fragment"
+            app:destination="@id/films_from_staff_fragment">
+            <argument
+                android:name="staffId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/films_from_staff_fragment"
+        android:name="com.example.skillcinema.presentation.screen.filmsFromStaff.FilmsFromStaffFragment"
+        android:label="@string/filmography"
+        tools:layout="@layout/fragment_films_from_staff">
+        <argument
+            android:name="staffId"
+            android:defaultValue="10143"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_films_from_staff_fragment_to_film_info_fragment"
+            app:destination="@id/film_info_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/search_film_fragment"
+        android:name="com.example.skillcinema.presentation.screen.search.SearchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_fragment_to_film_info_fragment"
+            app:destination="@id/film_info_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_search_fragment_to_search_parameters_fragment"
+            app:destination="@id/search_parameters_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_parameters_fragment"
+        android:name="com.example.skillcinema.presentation.screen.search.setParams.SearchParametersFragment"
+        android:label="@string/search_parameters"
+        tools:layout="@layout/fragment_search_parameters">
+        <action
+            android:id="@+id/action_search_parameters_fragment_to_set_country_fragment"
+            app:destination="@id/set_country_fragment" />
+        <action
+            android:id="@+id/action_search_parameters_fragment_to_set_genre_fragment"
+            app:destination="@id/set_genre_fragment" />
+        <action
+            android:id="@+id/action_search_parameters_fragment_to_set_years_fragment"
+            app:destination="@id/set_years_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/set_country_fragment"
+        android:name="com.example.skillcinema.presentation.screen.search.setParams.SetCountryFragment"
+        android:label="@string/country"
+        tools:layout="@layout/fragment_set_country_or_genre" />
+
+    <fragment
+        android:id="@+id/set_genre_fragment"
+        android:name="com.example.skillcinema.presentation.screen.search.setParams.SetGenreFragment"
+        android:label="@string/genre"
+        tools:layout="@layout/fragment_set_country_or_genre" />
+
+    <fragment
+        android:id="@+id/set_years_fragment"
+        android:name="com.example.skillcinema.presentation.screen.search.setParams.SetYearsFragment"
+        android:label="@string/year"
+        tools:layout="@layout/fragment_set_years" />
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.skillcinema.presentation.screen.profile.ProfileFragment"
+        android:label=""
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_fragment_to_films_from_collection_fragment"
+            app:destination="@id/films_from_collection_fragment">
+            <argument
+                android:name="collectionType"
+                app:argType="com.example.skillcinema.entity.collections.TypeCollection" />
+        </action>
+        <action
+            android:id="@+id/action_profile_fragment_to_film_info_fragment"
+            app:destination="@id/film_info_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/films_from_collection_fragment"
+        android:name="com.example.skillcinema.presentation.screen.filmsFromCollection.FilmsFromCollectionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_film_list">
+        <argument
+            android:name="collectionType"
+            app:argType="com.example.skillcinema.entity.collections.TypeCollection" />
+        <action
+            android:id="@+id/action_film_list_fragment_to_film_info_fragment"
+            app:destination="@id/film_info_fragment">
+            <argument
+                android:name="kinopoiskId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+</navigation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/error_dialog_main_padding"
+    tools:context=".presentation.dialogs.ErrorDialogFragment">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TitleListText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/error_dialog_margin"
+            android:text="@string/error_title"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/error_dialog_margin"
+            android:layout_marginVertical="@dimen/borders"
+            android:text="@string/error_message"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/close"
+        android:padding="@dimen/error_dialog_margin"
+        app:srcCompat="@drawable/button_close" />
+
+</LinearLayout>

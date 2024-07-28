@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/borders">
+
+    <TextView
+        style="@style/ItemNameText"
+        android:id="@+id/number_and_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/lorem"/>
+
+    <TextView
+        style="@style/ItemDescriptionText"
+        android:id="@+id/synopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/lorem"
+        android:layout_marginVertical="4dp"/>
+
+    <TextView
+        style="@style/EpisodeDate"
+        android:id="@+id/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/lorem"/>
+
+</LinearLayout>

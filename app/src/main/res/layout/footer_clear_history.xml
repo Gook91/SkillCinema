@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/film_card_width"
+    android:layout_height="@dimen/film_card_poster_height">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/graphik_regular"
+        android:text="@string/clear_history"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        app:drawableTopCompat="@drawable/draw_clear_history" />
+</FrameLayout>

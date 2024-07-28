@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_borders">8dp</dimen>
+    <dimen name="borders">16dp</dimen>
+    <dimen name="horizontal_margin">26dp</dimen>
+
+    <!-- Кнопки на экране фильма -->
+    <dimen name="checkbox_size">34dp</dimen>
+
+    <!-- Постер фильма для карточки -->
+    <dimen name="film_card_height">200dp</dimen>
+    <dimen name="film_card_width">111dp</dimen>
+    <dimen name="film_card_poster_height">156dp</dimen>
+
+    <!-- Постер фильма для списка -->
+    <dimen name="film_list_poster_width">96dp</dimen>
+    <dimen name="film_list_poster_height">132dp</dimen>
+
+    <!-- Фото персонала для списка -->
+    <dimen name="staff_height">68dp</dimen>
+    <dimen name="staff_width">207dp</dimen>
+    <dimen name="staff_photo_width">49dp</dimen>
+
+    <!-- Картинка из галереи для списка -->
+    <dimen name="gallery_height">108dp</dimen>
+    <dimen name="gallery_width">192dp</dimen>
+
+    <!-- Диалог ошибки -->
+    <dimen name="error_dialog_main_padding">64dp</dimen>
+    <dimen name="error_dialog_margin">24dp</dimen>
+
+    <!-- Диалог коллекции -->
+    <dimen name="small_indent">34dp</dimen>
+    <dimen name="indent">52dp</dimen>
+    <dimen name="separator_in_title">32dp</dimen>
+    <dimen name="separator_in_item">24dp</dimen>
+    <dimen name="separator_in_create">28dp</dimen>
+    <dimen name="create_new_padding">4dp</dimen>
+
+    <!-- Диалог новой коллекции -->
+    <dimen name="button_height">36dp</dimen>
+    <dimen name="button_vertical_padding">0dp</dimen>
+    <dimen name="button_horizontal_padding">36dp</dimen>
+    <dimen name="dialog_radius_corner">18dp</dimen>
+
+    <!-- Фото персонала для окна информации -->
+    <dimen name="photo_staff_height">201dp</dimen>
+    <dimen name="photo_staff_width">146dp</dimen>
+
+    <!--  Карточка коллекции  -->
+    <dimen name="collection_card_width">146dp</dimen>
+    <dimen name="collection_card_height">@dimen/collection_card_width</dimen>
+    <dimen name="button_delete_size">24dp</dimen>
+    <dimen name="button_delete_margin">5dp</dimen>
+
+    <!-- Минимальная высота вью-постера, пока или если он не загрузится -->
+    <dimen name="min_height_poster">400dp</dimen>
+
+    <!-- Вью с выбором года-->
+    <dimen name="year_text_view_height">32dp</dimen>
+
+</resources>
